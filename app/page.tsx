@@ -39,7 +39,7 @@ export default function Home() {
     const query = new URLSearchParams(form).toString();
 
     try {
-      const res = await fetch(`https://deepak2200233-job-market-intelligence.onrender.com/predict?${query}`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/predict?${query}`, {
         method: "POST"
       });
 
